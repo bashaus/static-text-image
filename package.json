@@ -1,0 +1,32 @@
+{
+  "name": "static-text-image",
+  "version": "1.0.0",
+  "description": "Generates images from a HTML file based on a JSON stylesheet",
+  "main": "index.js",
+  "author": {
+    "name": "Bashkim Isai",
+    "url": "https://www.bashkim.com/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "# brew install pkg-config cairo pango libpng jpeg giflib",
+    "lint": "node_modules/.bin/eslint *.js lib/*.js",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "posthtml",
+    "metalsmith",
+    "img",
+    "image",
+    "email"
+  ],
+  "dependencies": {
+    "canvas": "^2.0.0-alpha.11",
+    "html-entities": "^1.2.1",
+    "posthtml": "^0.11.3",
+    "text2png": "^2.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1"
+  }
+}

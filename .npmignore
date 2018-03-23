@@ -1,0 +1,6 @@
+/node_modules/
+.gitignore
+.npmignore
+.eslintrc.json
+.travis.yml
+npm-debug.log

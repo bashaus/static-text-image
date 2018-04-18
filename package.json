@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "# brew install pkg-config cairo pango libpng jpeg giflib",
-    "lint": "node_modules/.bin/eslint *.js lib/*.js",
+    "lint": "node_modules/.bin/eslint index.js lib/**/*.js",
     "test": "npm run lint"
   },
   "keywords": [

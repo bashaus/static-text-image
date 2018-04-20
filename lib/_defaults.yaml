@@ -13,27 +13,44 @@
 
 ---
 
-backgroundImage: null
-# @type String or NULL
-# The background image to use as a base for this image. If a background image
-# is defined, the final image will be its exact dimensions.
+background:
+  src: null
+  # @type String or NULL
+  # The background image to use as a base for this image. If a background image
+  # is defined, the final image will be its exact dimensions.
 
 textBox:
 
-  registrationPoint: NW
-  # @type Enum( NW, N, NE, W, C, M, E, SW, S, SE )
-  # The point in which the text box should be measured from, this is useful if
-  # you have text which you want to be grow from the vertical or horizontal
-  # center or right. Each are points on a compass, and "C" and "M" are
-  # "center" or "middle"
+  offset:
+    registrationPoint: null
+    # @type Enum( NW, N, NE, W, C, M, E, SW, S, SE )
+    # The point in which the text box should be measured from, this is useful if
+    # you have text which you want to be grow from the vertical or horizontal
+    # center or right. Each are points on a compass, and "C" and "M" are
+    # "center" or "middle".
+    #
+    # The default registration point is dymanic, depending on what offsets have
+    # been defined:
+    # - top and left: NW
+    # - top and right: NE
+    # - bottom and left: SW
+    # - bottom and right: SE
 
-  x: 0
-  # @type Integer
-  # The X position of the registration point of the text box
+    top: null
+    # @type Integer or NULL
+    # Position the text box a number of pixels from the top of the canvas
 
-  y: 0
-  # @type Integer
-  # The Y position of the registration point of the text box
+    left: null
+    # @type Integer or NULL
+    # Position the text box a number of pixels from the left of the canvas
+
+    right: null
+    # @type Integer or NULL
+    # Position the text box a number of pixels from the right of the canvas
+
+    bottom: null
+    # @type Integer or NULL
+    # Position the text box a number of pixels from the bottom of the canvas
 
   font: "20px Helvetica"
   # @type String or NULL
@@ -108,3 +125,5 @@ textBox:
   # A valid hexidecimal colour for the border of the text box
   # You must surround the hexidecimal in quotes as comments begin with a hash
   # NULL value will produce a transparent border
+
+sprites: []

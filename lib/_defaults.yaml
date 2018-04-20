@@ -1,0 +1,110 @@
+# Static text image: stylesheet
+#
+# This YAML file contains the style configuration for generating a static image
+# which can be used for custom fonts in emails.
+#
+# You can optionally use JSON files instead of YAML; however, the main
+# advantage of using YAML is that you can embed comments.
+#
+# The property values in this file are the default values, and the comments
+# describe other optional values which can be used.
+#
+# Remember that all file paths are relative to this stylesheet.
+
+---
+
+backgroundImage: null
+# @type String or NULL
+# The background image to use as a base for this image. If a background image
+# is defined, the final image will be its exact dimensions.
+
+textBox:
+
+  registrationPoint: NW
+  # @type Enum( NW, N, NE, W, C, M, E, SW, S, SE )
+  # The point in which the text box should be measured from, this is useful if
+  # you have text which you want to be grow from the vertical or horizontal
+  # center or right. Each are points on a compass, and "C" and "M" are
+  # "center" or "middle"
+
+  x: 0
+  # @type Integer
+  # The X position of the registration point of the text box
+
+  y: 0
+  # @type Integer
+  # The Y position of the registration point of the text box
+
+  font: "20px Helvetica"
+  # @type String or NULL
+  # The font specification to display the text. Usually found in the format of:
+  # [font-size] [font-name]
+  #
+  # Examples:
+  # "60px Helvetica"  -- built-in font
+  # "60px Andada"     -- custom font
+  # @see https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font
+  # @see localFontPath
+  # @see localFontName
+
+  localFontPath: null
+  # @type String or NULL
+  # Specify the file location of the custom font to be available
+  # Example: "../fonts/andada/Andada-Regular.otf"
+  # @see font
+  # @see localFontName
+
+  localFontName: null
+  # @type String or NULL
+  # Specify the name of the custom font to be available in the "font" property
+  # Example: "Andada"
+  # @see font
+  # @see localFontName
+
+  lineSpacing: 0
+  # @type Integer
+  # The amount of space (in pixels) between multiline text
+
+  textAlign: left
+  # @type Enum( left, center, right )
+  # Whether the text should be aligned in the left, center or right. Useful for
+  # multiline text.
+
+  textTransform: null
+  # @type Enum( uppercase, lowercase ) or NULL
+  # Changes the case of the text
+
+  color: "#000000"
+  # @type String or NULL
+  # A valid hexidecimal colour for the text colour
+  # You must surround the hexidecimal in quotes as comments begin with a hash
+
+  backgroundColor: null
+  # @type String or NULL
+  # A valid hexidecimal colour for the background of the text box
+  # You must surround the hexidecimal in quotes as comments begin with a hash
+  # NULL value will produce a transparent background
+
+  padding: 0
+  paddingLeft: null
+  paddingTop: null
+  paddingRight: null
+  paddingBottom: null
+  # @type Integer or NULL
+  # The amount of padding around the text box. Optionally, you can specify
+  # different padding for each of the sides
+
+  borderWidth: 0
+  borderLeftWidth: null
+  borderTopWidth: null
+  borderRightWidth: null
+  borderBottomWidth: null
+  # @type Integer or NULL
+  # The width of the border around the text box. Optionally, you can specify
+  # different padding for each of the sides
+
+  borderColor: "#000000"
+  # @type String or NULL
+  # A valid hexidecimal colour for the border of the text box
+  # You must surround the hexidecimal in quotes as comments begin with a hash
+  # NULL value will produce a transparent border

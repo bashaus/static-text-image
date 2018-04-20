@@ -1,6 +1,6 @@
 # static-text-image
 
-> Generates images from a HTML file based on a JSON stylesheet
+> Generates images from a HTML file based on a YAML or JSON stylesheet
 
 ## Notes
 
@@ -18,6 +18,10 @@ A few dependencies are REQUIRED to be installed in order to use
 brew install pkg-config cairo pango libpng jpeg giflib
 npm install static-text-image
 ```
+
+## Usage
+
+See `lib/_defaults.yml` for a list of available options.
 
 ## License
 
